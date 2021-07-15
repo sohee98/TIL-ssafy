@@ -82,6 +82,24 @@ $ git log --oneline -2 # 한줄로 최근 n개만
 
 
 
+### 원격 저장소 
+
+- 원격저장소를 origin에 저장
+
+```bash
+$ git remote add origin URL
+```
+
+* 업로드
+
+```bash
+$ git push origin master
+```
+
+![image-20210715135018018](md-images/image-20210715135018018.png)
+
+
+
 
 
 
