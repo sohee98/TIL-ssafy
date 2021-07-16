@@ -18,8 +18,8 @@ POST https://openapi.naver.com/v1/papago/n2mt
 '''
 # 0. naver에서 발급받은 ID/secret
 headers = {
-    'X-Naver-Client-Id': 'orXNu42lU1emSAstK__G',
-    'X-Naver-Client-Secret': 'H9dvk1fWJI'
+    'X-Naver-Client-Id': 'IhGm9xsG6TUJk8RBYCXt',
+    'X-Naver-Client-Secret': 'dwg66HHmwG'
 }
 # 0. URL
 source = 'en'
