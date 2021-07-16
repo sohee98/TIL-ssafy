@@ -84,3 +84,11 @@ result = response.json()
 print(result['country'][0]['country_id'])
 ```
 
+
+
+* 크롤링과 API의 차이
+
+![image-20210716112830541](md-images/image-20210716112830541.png)
+
+![image-20210716112914031](md-images/image-20210716112914031.png)
+

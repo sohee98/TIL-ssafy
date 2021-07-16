@@ -64,3 +64,17 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 ```
 
+
+
+* pull : 버전을 받아옴 
+  * push                         >> 작업중
+
+* clone : 저장소를 받아옴 
+  * init                            >> 프로젝트 시작
+
+```bash
+$ git clone **https://github.com/sohee98/TIL.git**
+```
+
+
+
