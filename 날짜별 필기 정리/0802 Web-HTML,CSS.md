@@ -439,7 +439,7 @@
 
 #### ■ absolute
 
-![image-20210802155021508](md-images/image-20210802155021508.png)
+![image-20210802155021508](md-images/image-20210802155336124.png)
 
 > (static 아닌) 부모(relative)를 먼저 만들어야 함 
 >
