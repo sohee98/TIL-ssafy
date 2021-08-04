@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+<!-- 1. Buttons -->
+<div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-success p-2" type="button">Sign in</button>
+</div>
+<hr>
+
+<!-- 2. Navbar -->
+<nav class="navbar navbar-expand navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">
+      <img src="./ssafy.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white ms-3" href="#">프로젝트</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#">그룹들</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">활동</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">마일스톤</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">스니펫</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<hr>
+
+<!-- 3. Pagination -->
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Prev</a>
+    </li>
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item" ><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+<hr>
+
+<!-- 4. Buttons, Forms, .. -->
+<div class="alert py-3 rounded-0 w-50 bg-danger text-white fw-bold">
+  Invalid Login or password
+</div>
+<div class="display-6 fw-bold my-3">SSAFY 전용 GitLab 시스템</div>
+<p class="border-bottom border-secondary w-50"></p>
+<form class="position-relative border border-secondary rounded-2 w-50">
+  <div class="text-center fw-bold py-4 border-bottom border-primary border-2">
+    Sign in
+  </div>
+  <div class="my-3 px-4 py-2">
+    <label for="exampleDropdownFormEmail2" class="form-label fw-bold">Username of email</label>
+    <input type="email" class="form-control" id="exampleDropdownFormEmail2">
+  </div>
+  <div class="mb-3 px-4 py-2">
+    <label for="exampleDropdownFormPassword2" class="form-label fw-bold">Password</label>
+    <input type="password" class="form-control" id="exampleDropdownFormPassword2">
+  </div>
+  <div class="mb-3 px-4 py-2">
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+      <label class="form-check-label" for="dropdownCheck2">
+        Remember me
+      </label>
+      <p class="position-absolute d-inline text-primary end-0 me-4">Forgot your password?</p>
+    </div>
+  <div class="d-grid gap-3 py-2">
+      <button class="btn btn-success mt-4" type="button">Sign in</button>
+  </div>
+</form>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
