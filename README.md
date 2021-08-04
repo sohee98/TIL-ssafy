@@ -23,7 +23,7 @@
 | 08-01 | SWEA - difficulty 1 - 6개                        |  ■   |
 | 08-02 | SWEA - difficulty 1 - 3개, <br />백준 - if문 5개 |  ■   |
 | 08-03 | SWEA - difficulty 1 - 3개                        |  ■   |
-|       |                                                  |      |
+| 08-04 | 입출력 문제 1~4번                                |  ■   |
 
 
 
