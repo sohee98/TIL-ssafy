@@ -9,10 +9,10 @@
 
 ## 내용
 
-| 일자 |         내용          |
-| :--: | :-------------------: |
-| day1 |      HTML / CSS       |
-| day2 | Grid / Responsive Web |
+| 일자 |    내용    |
+| :--: | :--------: |
+| day1 | HTML / CSS |
+| day2 | CSS Layout |
 
 ## 명령어 안내
 
