@@ -64,33 +64,32 @@
 <hr>
 
 <!-- 4. Buttons, Forms, .. -->
-<div class="alert py-3 rounded-0 w-50 bg-danger text-white fw-bold">
+<div class="p-3 m-3 bg-danger text-white fw-bold">
   Invalid Login or password
 </div>
-<div class="display-6 fw-bold my-3">SSAFY 전용 GitLab 시스템</div>
-<p class="border-bottom border-secondary w-50"></p>
-<form class="position-relative border border-secondary rounded-2 w-50">
-  <div class="text-center fw-bold py-4 border-bottom border-primary border-2">
-    Sign in
-  </div>
+<div class="display-6 fw-bold m-3">SSAFY 전용 GitLab 시스템</div>
+<hr>
+<form class="border border-secondary rounded-2 m-4">
+  <div class="text-center fw-bold m-3">Sign in</div>
+  <hr style="height: 3px;">
   <div class="my-3 px-4 py-2">
-    <label for="exampleDropdownFormEmail2" class="form-label fw-bold">Username of email</label>
-    <input type="email" class="form-control" id="exampleDropdownFormEmail2">
+    <label for="Email" class="form-label fw-bold">Username of email</label>
+    <input type="email" class="form-control" id="Email">
   </div>
   <div class="mb-3 px-4 py-2">
-    <label for="exampleDropdownFormPassword2" class="form-label fw-bold">Password</label>
-    <input type="password" class="form-control" id="exampleDropdownFormPassword2">
+    <label for="Password" class="form-label fw-bold">Password</label>
+    <input type="password" class="form-control" id="Password">
   </div>
   <div class="mb-3 px-4 py-2">
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-      <label class="form-check-label" for="dropdownCheck2">
-        Remember me
-      </label>
-      <p class="position-absolute d-inline text-primary end-0 me-4">Forgot your password?</p>
+    <div class="form-check d-flex justify-content-between">
+      <div>
+        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+        <label class="form-check-label" for="dropdownCheck">Remember me</label>
+      </div>
+      <a href="#">Forgot your password?</a>
     </div>
-  <div class="d-grid gap-3 py-2">
-      <button class="btn btn-success mt-4" type="button">Sign in</button>
+  <div class="d-grid py-2">
+    <button class="btn btn-success mt-4" type="button">Sign in</button>
   </div>
 </form>
 
