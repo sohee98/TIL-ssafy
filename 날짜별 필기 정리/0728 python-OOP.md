@@ -256,7 +256,7 @@ b = 20
 ![image-20210728154408497](md-images/image-20210728154408497.png)
 
 * `isinstance(object, classinfo)`
-- object가 classinfo의 인스턴스거나 subclass인 경우 True
+  * object가 classinfo의 인스턴스거나 subclass인 경우 True
 * `issubclass(class, classinfo)`
   - class가 classinfo의 subclass면 True
   - classinfo는 클래스 객체의 튜플일 수 있으며, classinfo의 모든 항목을 검사
