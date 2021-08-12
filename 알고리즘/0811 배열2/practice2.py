@@ -7,7 +7,6 @@ for t in range(1, T+1):
     n = len(arr)
     result = 0
 
-    part = []
     for i in range(1<<n):
         part = []
         for j in range(n+1):
