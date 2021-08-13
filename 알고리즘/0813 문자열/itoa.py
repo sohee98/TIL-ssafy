@@ -5,7 +5,6 @@ def myReverse(lst):
         result.append(lst[i])
     return result
 
-
 def itoa(value):
     t = []
     if value < 0:
@@ -17,7 +16,7 @@ def itoa(value):
     while value > 0:
         t.append(chr(value % 10 + 0x30))
         value //= 10
-    #t.reverse()
+    # t.reverse()
     t = myReverse(t)
     if isMinus:
         return '-' + ''.join(t)

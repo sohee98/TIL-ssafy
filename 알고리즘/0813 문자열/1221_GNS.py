@@ -1,5 +1,5 @@
 import sys
-sys.stdin=open(f'1221input.txt', "r")
+sys.stdin = open(f'1221input.txt', "r")
 
 def getIndex(a, lst):
     for i in range(len(lst)):
