@@ -1,3 +1,5 @@
+> 현재의 웹 표준 WHATWG
+
 ## [1] HTML 
 
 (Hyper Text Markup Language)
@@ -305,7 +307,7 @@
 
 #### ■ CSS 문서 표현
 
-​	<img src="md-images/image-20210802144723042.png" alt="image-20210802144723042" style="zoom:80%;" />
+​	<img src="md-images/image-20210802144723042.png" alt="image-20210802144723042"  />
 
 
 
