@@ -4,14 +4,17 @@ sys.stdin = open(f'4874sample_input.txt', "r")
 def Forth(S):
     ST = []
     for s in S:
-        if s.isdigit():
+        if s == '.':
+            if len(ST)>=2:
+                return 'error'
+            else:
+                return ST.pop()
+        if s.isdecimal():
             ST.append(s)
         else:
-            if s == '.':
-                return ST.pop()
             if len(ST) >= 2:
-                s2 = int(ST.pop(-1))
-                s1 = int(ST.pop(-1))
+                s2 = int(ST.pop())
+                s1 = int(ST.pop())
                 if s == '*':
                     ST.append(s1 * s2)
                 elif s == '/':
