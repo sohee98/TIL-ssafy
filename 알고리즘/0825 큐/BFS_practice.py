@@ -24,6 +24,19 @@ def bfs_G(v):
                 q.append(w)
                 visited[w] = True
 
+def bfs_G1(v):
+    q = []                  # 큐 생성
+    visited = [0]*8     # visited 생성
+    q.append(v)             # 시작점 인큐
+    visited[v] = 1          # 시작점 visited 표시
+    while q:
+        v = q.pop(0)
+        print(v, visited[v])
+        for w in G[v]:
+            if not visited[w]:
+                q.append(w)
+                visited[w] = visited[v] + 1
+
 def bfs_adj(v):
     q = []                  # 큐 생성
     visited = [False]*8     # visited 생성

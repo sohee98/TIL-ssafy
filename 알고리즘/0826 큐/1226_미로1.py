@@ -1,5 +1,6 @@
 import sys
-sys.stdin = open(f'5105sample_input.txt', "r")
+sys.stdin = open(f'1226input.txt', "r")
+
 dx = [0, 1, 0, -1]
 dy = [-1, 0, 1, 0]
 def bfs(x, y):
@@ -15,13 +16,13 @@ def bfs(x, y):
                 q.append((nx,ny))
                 visited[nx][ny] = visited[x][y] + 1
             elif 0<=nx<N and 0<=ny<N and A[nx][ny] == 3:
-                return visited[x][y]-1
+                return 1
     return 0
 
-
-T = int(input())
+T = 10
 for t in range(1, T+1):
-    N = int(input())
+    tc = int(input())
+    N = 16
     A = []
     for n in range(N):
         S = input()
@@ -29,7 +30,6 @@ for t in range(1, T+1):
         for m in range(N):
             a.append(int(S[m]))
         A.append(a)
-
     for i in range(N):
         for j in range(N):
             if A[i][j] == 2:
@@ -38,5 +38,4 @@ for t in range(1, T+1):
             if A[i][j] == 3:
                 endX = i
                 endY = j
-
     print('#{} {}'.format(t,bfs(curX, curY)))
