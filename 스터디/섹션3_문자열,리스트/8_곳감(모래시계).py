@@ -21,19 +21,15 @@ for t in range(1, 6):
                 after.append(before[y])
             y += 1
         farm.insert(x, after)
-    print(farm)
-    cnt = 0
-    i = 0
-    while i <= N // 2:
-        cnt += farm[i][N//2]
-        for a in range(N//2, i, -1):
-            cnt += farm[i][N // 2 - a] + farm[i][N // 2 + a]
-        i += 1
-    i = N // 2 + 1
-    while N // 2 < i < N:
-        cnt += farm[i][N//2]
-        for a in range(1, i-N//2+1):
-            cnt += farm[i][N // 2 - a] + farm[i][N // 2 + a]
-        i += 1
-    print(cnt)
+
+    total = 0
+    for i in range(len(farm)):
+        if i <= N//2:
+            for j in range(i, N-i):
+                total += farm[i][j]
+        else:
+            for j in range(N-i-1, i+1):
+                total += farm[i][j]
+    print(total)
+
 
