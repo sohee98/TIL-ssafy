@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6a79713f-b6ee-4977-9e60-9a3a5303066f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../관통 PJT/pjt03" beforeDir="false" afterPath="$PROJECT_DIR$/../../관통 PJT/pjt03" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827091742457.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827092701874.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827092845042.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827093032121.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827093417005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827094726373.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827094757134.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827094849794.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827094903861.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827095004089.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827095030911.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827111142989.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827111248355.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827111312892.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827111554088.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827111606322.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827143139637.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827144127455.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827171220699.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827171242813.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.assets/image-20210827171340286.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../날짜별 필기 정리/0827 APS-트리.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1xQL0NuTYGCfp9jTzxcyBd8RUkA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a79713f-b6ee-4977-9e60-9a3a5303066f" name="Changes" comment="" />
+      <created>1630282142635</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630282142635</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>오늘 저녁은 {{ pick }}!</h1>
+  <p>{{ pick }}은 {{ pick|length }}글자</p>
+  {% comment %} <p>{{ foods|join:", " }}</p> {% endcomment %}
+
+  <ul>
+    {% for food in foods %}
+      <li>{{ food }}</li>
+    {% endfor %}
+  </ul>
+
+  <a href="/index/">뒤로</a>
+{% endblock %}

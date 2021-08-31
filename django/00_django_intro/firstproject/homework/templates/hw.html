@@ -1,0 +1,28 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+
+{% block content %}
+  {% for menu in menus %}
+      <li>{{ menu }}</li>
+  {% endfor %}
+
+  {% for post in posts %}
+    <p>{{ forloop.counter0 }}번 글 : {{ post }}</p>
+  {% endfor %}
+
+  {% for user in users %}
+    <p>{{ user }}</p>
+  {% empty %}
+      <p>현재 가입한 유저가 없습니다.</p>
+  {% endfor %}
+
+  {% if forloop.first %}
+    <p>첫 번째 반복문 입니다.</p>
+  {% else %}
+      <p>첫 번째 반복문이 아닙니다.</p>
+  {% endif %}
+
+  <p>{{ 'hello'|length }}</p>
+  <p>{{ 'my name is tom'|title }}</p>
+  
+  <p>{{ today|date:"Y년 m월 d일 (D) A h:i" }}</p>
+{% endblock %}
