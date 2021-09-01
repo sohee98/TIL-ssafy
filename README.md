@@ -22,6 +22,7 @@
 | 08-25 | 알고리즘 - 큐                        |  ★   |
 | 08-27 | 알고리즘 - 트리                      |  ★   |
 | 08-31 | django - Template, View, Routing     |  ★   |
+| 09-01 | django - Model                       |  ★   |
 
 
 
