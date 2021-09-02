@@ -6,7 +6,7 @@ base_url/getUpdates로 요청 보내서,
 chat_id에 해당하는 값을 저장
 '''
 # 0. 정보 
-TOKEN = '1867056710:AAFnhePR2RntFlugrCtQXUFl0JRF82BnuVc'
+TOKEN = ''
 BASE_URL = f'https://api.telegram.org/bot{TOKEN}'
 # 1. url 요청하고, 결과를 python 자료구조로 저장
 get_updates_url = f'{BASE_URL}/getUpdates'
