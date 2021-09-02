@@ -255,7 +255,7 @@
 
 * article 인스턴스 생성 후 .delete() 호출
   * `article = Article.objects.get(pk=1)`
-  * `article.deleteㅇ()`
+  * `article.delete()`
 * QuerySet의 모든 행에 대해 SQL 삭제 쿼리를 수행하고, 삭제된 객체 수와 객체 유형당 삭제 수가 포함된 딕셔너리를 반환
 
 <img src="md-images/image-20210901144057841.png" alt="image-20210901144057841" style="zoom:80%;" />
@@ -332,7 +332,80 @@
   * csrf 공격 관련 보안 설정은 settings.py 에서 MIDDLEWARE에 작성되어있음
   * 실제로 요청 과정에서 urls.py 이전에 Middleware의 설정 사항들을 순차적으로 거치며 응답은 반대로 하단에서 상단으로 미들웨어를 적용시킴
 
-  
+
+
+
+* Django shortcut functions - `redirect()`
+
+  * 새 URL로 되돌림
+
+  * 인자에 따라 HttpResponseRedirect를 반환
+
+  * 브라우저는 현재 경로에 따라 전체 URL 자체를 재구성(reconstruct)
+
+  * 사용 가능한 인자
+
+    * model
+    * view name : viewname can be URL pattern name of callable view object
+    * absolute or relative URL
+
+<img src="md-images/image-20210902094205074.png" alt="image-20210902094205074" style="zoom:67%;" />
+
+
+
+
+
+## Admin Site
+
+* Automatic admin interface
+
+  * 사용자가 아닌 서버의 관리자가 활용하기 위한 페이지
+  * Model class를 admin.py에 등록하고 관리
+  * django.contrib.auth 모듈에서 제공됨
+  * record 생성 여부 확인에 매우 유용하며, 직접 record를 삽입할 수도 있음
+
+* admin 생성
+
+  * `$ python manage.py createsuperuser`
+  * 관리자 계정 생성 후 서버를 실행한 다음 '/admin' 으로 가서 관리자 페이지 로그인
+  * 내가 만든 record를 보기 위해서는 admin.py에 작성하여 Django 서버에 등록
+  * [주의] auth에 관련된 기본 테이블이 생성되지 않으면 관리자 계정을 생성할 수 없음 (auth_user)
+
+* admin 등록
+
+  ![image-20210902091603778](md-images/image-20210902091603778.png)
+
+  * admin.py는 관리자 사이트에 Article 객체가 관리자 인터페이스를 가지고 있다는 것을 알려주는 것
+  * models.py에 정의한 `__str__`의 형태로 객체가 표현됨
+
+* ModelAdmin options
+
+  ![image-20210902092626608](md-images/image-20210902092626608.png)
+
+  * list_display
+    * models.py 정의한 각각의 속성들의 값을 admin 페이지에 출력하도록 설정
+
+  * list_filter, list_display_links 등 다양한 ModelAdmin options 참고
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
