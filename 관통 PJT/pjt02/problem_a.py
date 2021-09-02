@@ -6,7 +6,7 @@ def popular_count():
     """
     popular 영화목록의 개수 출력.
     """
-    tmdb_helper = TMDBHelper('7c6377fdbf40d8566d0e591005c3dad5')
+    tmdb_helper = TMDBHelper('api_key')
     
     request_url = tmdb_helper.get_request_url()
     data = requests.get(request_url).json()
