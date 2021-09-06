@@ -17,9 +17,8 @@
 
 * gitignore
   * https://www.toptal.com/developers/gitignore
-    개발할때 쓰는거 다 입력
-  * windows venv Python Django
-    gitignore안에 붙여넣기
+    개발할때 쓰는거 다 입력 - windows venv Python Django
+  * gitignore안에 붙여넣기
 
 
 

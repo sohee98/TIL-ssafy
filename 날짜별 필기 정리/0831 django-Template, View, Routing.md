@@ -61,7 +61,7 @@
   * 앱은 실제 요청을 처리하고 페이지를 보여주고 하는 등의 역할을 담당
   * 하나의 프로젝트는 여러 앱을 가짐
   * 일반적으로 앱은 하나의 역할 및 기능 단위로 작성함
-  * 생성 : `python manage.py startapp articles` (# settings.py)
+  * 생성 : `python manage.py startapp articles`
     * 앱이름 : articles
 
 

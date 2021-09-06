@@ -23,7 +23,8 @@
 | 08-27 | 알고리즘 - 트리                      |  ★   |
 | 08-31 | django - Template, View, Routing     |  ★   |
 | 09-01 | django - Model                       |  ★   |
-| 09-03 | 관통 PJT 4 - django                  |      |
+| 09-03 | 관통 PJT 4 - django                  |  ★   |
+| 09-06 | django - Form/ModelForm              |  ★   |
 
 
 
