@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>CREATE</h1>
+  <form action="{% url 'articles:create' %}" method="POST">
+    {% csrf_token %}
+    {% comment %} {{ form.as_p }} {% endcomment %}
+    <div>
+      {{ form.title.errors }}
+      {{ form.title.lavel_tag }}
+      {{ form.title }}
+    </div>
+    <div>
+      {{ form.content.errors }}
+      {{ form.content.lavel_tag }}
+      {{ form.content }}
+    </div>
+    <input type="submit">
+  </form>
+  <hr>
+  <a href="{% url 'articles:index' %}">[back]</a>
+{% endblock  %}

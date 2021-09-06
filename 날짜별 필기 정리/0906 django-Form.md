@@ -150,13 +150,13 @@
       return redirect('articles:new')
   ```
 
-* is_valid() method
+* `is_valid()` method
   * 유효성 검사를 실행하고, 데이터가 유효한지 여부를  boolean으로 반환
   * 데이터 유효성 검사를 보장하기 위한 많은 테스트에 대해 django는 is_valid() 제공
 
 > [참고] 유효성 검사 : 요청한 데이터가 특정 조건에 충족하는지 확인. 데이터베이스 각 필드 조건에 올바르지않는 데이터가 서버로 전공되거나, 저장되지 않도록 하는 것 
 
-* The save() method
+* The `save()` method
 
   * form에 바인딩 된 데이터에서 데이터베이스 객체를 만들고 저장
   * ModelForm의 하위클래스는 기존 모델 인스턴스를 키워드 인자 instance로 받아 들일 수 있음
@@ -264,11 +264,26 @@ def create(request):
 
 1. Rendering fields manually
 
+   ```django
+   <div>
+     {{ form.title.errors }}
+     {{ form.title.lavel_tag }}
+     {{ form.title }}
+   </div>
+   <div>
+     {{ form.content.errors }}
+     {{ form.content.lavel_tag }}
+     {{ form.content }}
+   </div>
+   ```
+
+   
+
    ![image-20210906152533634](md-images/image-20210906152533634.png)
 
 2. Looping over the form's fields ({% for %})
 
-   ![image-20210906152545259](md-images/image-20210906152545259.png)
+   <img src="md-images/image-20210906152545259.png" alt="image-20210906152545259" style="zoom:80%;" />
 
 
 
