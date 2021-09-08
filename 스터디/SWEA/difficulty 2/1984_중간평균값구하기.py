@@ -24,3 +24,4 @@ for tc in range(1, T+1):
     sumV = mySum(numbers)
     avgV = round(sumV / (len(numbers)-2))
     print('#{} {}'.format(tc, avgV))
+

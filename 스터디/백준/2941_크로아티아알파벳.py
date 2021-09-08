@@ -30,10 +30,3 @@ for i in range(len(word)):
     if i == len(word)-1:
         cnt += len(tmp)
 print(cnt)
-
-
-
-
-
-
-
