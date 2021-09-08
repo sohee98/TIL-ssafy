@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+  <h2 class='fw-bold'>Articles</h2>
+  <a href="{% url 'articles:create' %}">NEW</a>
+  <hr>
+  {% for article in articles %}
+    <div class='fw-bold fs-2'>{{ article.pk }}</div>
+    <div class='fw-bold fs-2'>{{ article.title }}</div>
+    <a href="{% url 'articles:detail' article.pk %}">DETAIL</a>
+    <hr>
+  {% endfor %}
+{% endblock %}

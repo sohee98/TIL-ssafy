@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+  <h1 class='fw-bold'>EDIT</h1>
+  <form action="{% url 'articles:update' article.pk %}" method="POST" class='fw-bold'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value='submit' class='fw-bold'>
+  </form>
+  <a href="{% url 'articles:index' %}">BACK</a>
+{% endblock  %}

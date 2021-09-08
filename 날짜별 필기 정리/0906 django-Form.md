@@ -206,7 +206,7 @@ def create(request):
       )
       content = forms.CharField(
           label='내용',
-          widget=forms.TextInput(
+          widget=forms.Textarea(
               attrs={
                   'class': 'my-content',
                   'placeholder': 'Enter the content',
@@ -220,9 +220,29 @@ def create(request):
           fields = '__all__'
   ```
 
+* ### Delete 수정
 
+  ```python
+  # views.py
+  def delete(request, pk):
+      article = get_object_or_404(Article, pk=pk)
+      if request.method == 'POST':
+          article.delete()
+          return redirect('articles:index')
+      return redirect('articles:detail', article.pk)
+  ```
 
-* ### UPDATE views 수정
+  ```django
+  # detail.html
+  <form action="{% url 'articles:delete' article.pk %}" method="POST">
+      {% csrf_token %}
+      <input type='submit' value='DELETE'>
+  </form>
+  ```
+
+  
+
+* ### UPDATE 수정
 
   ```python
   # views.py (edit -> update)
@@ -288,6 +308,89 @@ def create(request):
 
 
 ### Bootstrap과 함께 사용하기
+
+* Bootstrap class with widget (핵심 클래스 : form-control)
+
+  ```python
+  # forms.py
+  class ArticleForm(forms.ModelForm):
+      title = forms.CharField(
+          label='제목',
+          widget=forms.TextInput(
+              attrs={
+                  'class': 'my-title form-control',
+                  'placeholder': 'Enter the title',
+                  'maxlength': 10
+              }
+          )
+      )
+  ```
+
+  ```django
+  # create.html
+  {% extends 'base.html' %}
+  
+  {% block content %}
+    <h1>CREATE</h1>
+    <form action="{% url 'articles:create' %}" method="POST">
+      {% csrf_token %}
+      {% for field in form %}
+        {% if field.errors %}
+          {% for error in field.errors %}
+            <div class="alert alert-warning" role="alert">{{ error|escape }}</div>
+          {% endfor %}
+        {% endif %}
+        <div class="fprm-group">
+          {{ field.label_tag }}
+          {{ field }}
+        </div>
+      {% endfor %}
+      <input type="submit">
+    </form>
+    <hr>
+    <a href="{% url 'articles:index' %}">[back]</a>
+  {% endblock  %}
+  
+  ```
+
+  
+
+* Django Bootstrap 5 Library
+
+  ```
+  $ pip install django-bootstrap-v5
+  ```
+
+  ```python
+  # settings.py
+  INSTALLED_APPS = [
+      'articles',
+      'bootstrap5',
+      ...
+  ]
+  ```
+
+  ```django
+  # base.html
+  {% load bootstrap5 %}
+  ! ...
+  {% bootstrap_css %} ...
+  {% bootstrap_javascript %}
+  ...
+  ```
+
+  ```django
+  # update.html
+  {% extends 'base.html' %}
+  {% load bootstrap5 %}
+  
+  {% block content %}
+    <h1>EDIT</h1>
+    <form action="{% url 'articles:update' article.pk %}" method="POST">
+      {% csrf_token %}
+      {% bootstrap_form form layout='horizontal' %}
+      ...
+  ```
 
 
 
