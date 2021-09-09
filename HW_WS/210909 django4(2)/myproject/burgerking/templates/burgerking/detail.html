@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <br>
+  <h2 class='fw-bold'>{{burger.menu}}</h2>
+  {% if burger.image %}
+    <img src="{{ burger.image.url }}" alt="{{ burger.image }}">
+  {% endif %}
+  <p>{{ burger.content }}</p>
+  <hr>
+  <a type='button' class='btn btn-warning' href="{% url 'burgerking:update' burger.pk %}">수정</a>
+
+  <form class='d-inline' action="{% url 'burgerking:delete' burger.pk %}" method="POST">
+    {% csrf_token %}
+    <button class='btn btn-danger'>삭제</button>
+  </form>
+  <hr>
+  <a type='button' class='btn btn-secondary' href="{% url 'burgerking:menu' %}">목록으로</a>
+{% endblock content %}

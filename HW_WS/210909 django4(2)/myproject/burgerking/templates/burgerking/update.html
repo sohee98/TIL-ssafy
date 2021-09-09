@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class='fw-bold'>메뉴 수정</h1>
+  <form action="{% url 'burgerking:update' burger.pk %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class='btn btn-primary' type="submit" value="수정" accept="image/*">
+  </form>
+  <a type='button' class='btn btn-secondary' href="{% url 'burgerking:menu' %}">목록으로</a>
+{% endblock content %}

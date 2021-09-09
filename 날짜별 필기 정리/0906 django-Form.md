@@ -119,6 +119,9 @@
 
   ```python
   # forms.py
+  from articles.models import Article
+  from django import forms
+  
   class ArticleForm(forms.ModelForm):
       class Meta:
           model = Article
@@ -391,10 +394,14 @@ def create(request):
       {% bootstrap_form form layout='horizontal' %}
       ...
   ```
+  
+  ```
+  {% buttons submit='OK' reset="Cancel" %}{% endbuttons %}
+  ```
+  
+  
 
-
-
-
+​	
 
 ## 4. Handling HTTP requests
 

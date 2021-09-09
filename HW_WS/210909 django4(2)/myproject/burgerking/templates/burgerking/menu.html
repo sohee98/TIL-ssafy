@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <br>
+  <h1 class="fw-bold text-center">메뉴 소개</h1>
+  <hr>
+  <h2 class="fw-bold">햄버거</h2>
+  <div class='row align-items-center'>
+  {% for burger in burgers %}
+    {% if burger.category == 'burger' %}
+      <div class='col-4'>
+        <img src="{{ burger.image.url }}" alt="{{ burger.image }}">
+        <div class='fs-4'>{{ burger.menu }}</div>
+        <a href="{% url 'burgerking:detail' burger.pk %}">상세정보</a>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+  <hr>
+  <div class='row align-items-center'>
+  <h2 class="fw-bold">사이드메뉴</h2>
+  {% for burger in burgers %}
+    {% if burger.category == 'side' %}
+      <div class='col-4'>
+        <img src="{{ burger.image.url }}" alt="{{ burger.image }}">
+        <div class='fs-4'>{{ burger.menu }}</div>
+        <a href="{% url 'burgerking:detail' burger.pk %}">상세정보</a>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+  <hr>
+  <div class='row align-items-center'>
+  <h2 class="fw-bold">음료 & 디저트</h2>
+  {% for burger in burgers %}
+    {% if burger.category == 'desert' %}
+      <div class='col-4'>
+        <img src="{{ burger.image.url }}" alt="{{ burger.image }}">
+        <div class='fs-4'>{{ burger.menu }}</div>
+        <a href="{% url 'burgerking:detail' burger.pk %}">상세정보</a>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+  <hr>
+  <a class='btn btn-primary' href="{% url 'burgerking:create' %}">메뉴 작성</a>
+{% endblock content %}

@@ -57,7 +57,7 @@
 
   * 실 서비스 환경(배포 환경)에서 django의 모든 정적 파일을 다른 웹 서버가 직접 제공하기 위함
 
-    ```
+    ```python
     # 정적 파일 수집  # settings.py
     STATIC_ROOT = BASE_DIR / 'staticfiles'
     ```
@@ -155,7 +155,7 @@
 
   * 파이썬의 strftime() 형식이 포함될 수 있으며, 이는 파일 업로드 날짜/시간으로 대체 됨
 
-  * `image = models.ImageField(upload_to='%Y/%m/%d', blank=True)`
+  * `image = models.ImageField(upload_to='uploads/%Y/%m/%d', blank=True)`
 
   * `media/2021/09/08` 파일에 업로드 이미지 저장
 
@@ -411,7 +411,7 @@ class Article(models.Model):
   
   ```django
   # detail.html
-  {% if {{ article.image }} %}
+  {% if article.image %}
     <img src="{{ article.image.url }}" alt="{{ article.image }}">
   {% endif %}
   ```
