@@ -37,6 +37,7 @@
 | 09-01 | django - Model                   |  ★   |
 | 09-06 | django - Form/ModelForm          |  ★   |
 | 09-08 | django - Managing Static Files   |  ★   |
+| 09-15 | django - Authentication System   |  ★   |
 
 ### ◆ DB
 
