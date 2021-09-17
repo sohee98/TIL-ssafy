@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <br>
+  <h1 class='fw-bold'>리뷰 목록</h1>
+  <hr>
+  {% for review in reviews %}
+    <div class='fs-3'>영화 제목 : 
+      <a href="{% url 'community:detail' review.pk %}">{{ review.movie_title}}</a>
+    </div>
+    <p class='fs-4'>리뷰 : {{ review.title }}</p>
+    <hr>
+  {% endfor %}
+{% endblock  %}

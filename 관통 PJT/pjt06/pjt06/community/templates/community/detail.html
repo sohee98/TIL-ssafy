@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <br>
+  <h1 class='fw-bold'>{{ review.pk }}번째 리뷰</h1>
+  <hr>
+  <p class='fs-3'>영화 제목 : {{ review.movie_title}}</p>
+  <p class='fs-4'>리뷰 제목 : {{ review.title }}</p>
+  <p class='fs-4'>내용 : {{ review.content }}</p>
+  <p class='fs-4'>평점 : {{ review.rank }}</p>
+  <div>작성 시간 : {{ review.created_at }}</div>
+  <div>수정 시간 : {{ review.updated_at }}</div>
+  <hr>
+  <a href="{% url 'community:update' review.pk %}" type='button' class='btn btn-primary'>수정</a>
+  <a href="{% url 'community:index'%}" type='button' class='btn btn-secondary'>뒤로</a>
+  <p></p>
+  <form action="{% url 'community:delete' review.pk %}" method='POST'>
+    {% csrf_token %}
+    <input class='btn btn-danger' type="submit" value='삭제'>
+  </form>
+{% endblock %}
