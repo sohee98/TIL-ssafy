@@ -7,13 +7,13 @@ def pre_order(n):
 def in_order(n):
     global cnt
     if n:                       # 유효한 정점이면
-        pre_order(left[n])      # n의 왼쪽자식으로 이동
+        in_order(left[n])      # n의 왼쪽자식으로 이동
         cnt += 1   # 정점의 개수  # print(n)
-        pre_order(right[n])
+        in_order(right[n])
 def post_order(n):
     if n:                       # 유효한 정점이면
-        pre_order(left[n])      # n의 왼쪽자식으로 이동
-        pre_order(right[n])
+        post_order(left[n])      # n의 왼쪽자식으로 이동
+        post_order(right[n])
         print(n)
 '''
 6
