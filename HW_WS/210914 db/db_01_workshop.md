@@ -121,7 +121,7 @@ User.objects.get(first_name='진호',last_name='백').delete()
 (11) balance를 기준으로 상위 4명의 first_name, last_name, balance를 조회하시오. 
 
 ```python
-User.objects.order_by('-balance').values('first_name','last_name','balance')[:10]
+User.objects.order_by('-balance').values('first_name','last_name','balance')[:4]
 ```
 
 (12) phone에 ‘123’을 포함하고 age가 30미만인 정보를 조회하시오. 

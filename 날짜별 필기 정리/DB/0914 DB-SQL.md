@@ -94,7 +94,7 @@ sqlite> CREATE TABLE classmates (
    ...> id INTEGER PRIMARY KEY,
    ...> name TEXT
    ...> );
-sqlite> .table
+sqlite> .tables
 classmates  examples
 ```
 
@@ -523,7 +523,8 @@ title  content  created_at           subtitle
 > $ pip install –r requirements.txt
 > $ python manage.py migrate
 > $ python manage.py sqlmigrate users 0001
-> $ sqlite3 db.sqlite3
+> $ python manage.py shell_plus 		# ORM
+> $ sqlite3 db.sqlite3				# SQL
 > ```
 
 ```sqlite
@@ -774,7 +775,7 @@ auth_user_user_permissions
 
 * DISTINCT (ORM)
 
-  ```
+  ```sqlite
   User.objects.filter(phone__startswith='010').values('country').distinct()
   ```
 
