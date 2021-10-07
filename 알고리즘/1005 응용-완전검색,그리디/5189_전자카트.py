@@ -15,7 +15,6 @@ def solve(i, sumV):      # i:현재 위치, sumV:합
             visited[j] = 0
 
 
-
 T = int(input())
 for tc in range(1, T+1):
     N = int(input())

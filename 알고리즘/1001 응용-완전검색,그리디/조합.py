@@ -16,6 +16,3 @@ N = 10
 R = 3
 comb = [0]*R
 nCr(N, R, 0, 0)
-
-dict = {}
-print(dict.get(3))

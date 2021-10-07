@@ -1,32 +1,37 @@
 import sys
 sys.stdin = open(f'1244input.txt', "r")
 
-# 32888 2
-
-def change(lst, k):
+def change(k):
     global maxV
-    if k == 0:
-        if int(''.join(lst)) > maxV:
-            maxV = int(''.join(lst))
+    intV = int(''.join(lst))
+
+    if k == c:
+        if intV > maxV:
+            maxV = intV
         return
-    for i in range(len(lst)):
+
+
+    for i in range(720):
+        if state[k][i] == 0:
+            state[k][i] = intV
+            break
+        if state[k][i] == intV:
+            return
+
+
+    for i in range(len(lst)-1):
         for j in range(i+1, len(lst)):
             lst[i], lst[j] = lst[j], lst[i]
-            tmpN = int(''.join(lst))
-            if num_dict.get((tmpN, k-1)):
-                pass
-            else:
-                num_dict[(tmpN, k-1)] = 1
-                change(lst, k-1)
+            change(k + 1)
             lst[i], lst[j] = lst[j], lst[i]
 
 T = int(input())
 for tc in range(1, T+1):
-    num, c = map(int, input().split())  # 숫자, 교환가능횟수
-    numL = [n for n in str(num)]
-    maxV = num
-    num_dict = {}
-    change(numL, c)
+    num, c = map(int, input().split())      # 숫자, 교환가능횟수
+    lst = [n for n in str(num)]
+    maxV = 0
+    state = [[0]*720 for _ in range(c)]     #[k][720]
+    change(0)
     print('#{} {}'.format(tc, maxV))
 
 
