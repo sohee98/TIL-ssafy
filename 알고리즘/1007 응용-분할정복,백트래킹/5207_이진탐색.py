@@ -2,19 +2,19 @@ import sys
 sys.stdin = open(f'5207sample_input.txt', "r")
 
 def find(lst, b):
-    global isLeft, isRight, s
+    global isLR, s
     if len(lst) <= 0:
         return
     l = 0
     r = len(lst)-1
     m = (l+r)//2
-    if lst[m] > b and isRight:          # 왼쪽구간 선택
-        isLeft = True
-        isRight = False
+    if lst[m] > b:          # 왼쪽구간 선택
+        if isLR == 'L':
+            return 0
+        isLR = 'L'
         find(lst[:m], b)
     elif lst[m] < b and isLeft:        # 오른쪽 구간 선택
-        isRight = True
-        isLeft = False
+        isLR = 'R'
         find(lst[m+1:], b)
     elif lst[m] == b:
         s = True
@@ -28,8 +28,7 @@ for tc in range(1, T+1):
     res = 0
     for b in range(M):
         s = False
-        isLeft = True
-        isRight = True
+        isLR = 0
         find(A, B[b])
         if s:
             res += 1
