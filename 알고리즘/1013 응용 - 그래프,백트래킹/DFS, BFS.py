@@ -4,9 +4,7 @@ def dfs_f(s):
     ST.append(s)
     visited[s] = True
     while ST:
-        s = ST.pop()    #pop(-1)
-        # if not visited[i]:
-        #     visited[i] = True
+        s = ST.pop()    # pop(-1)
         print(s, end=' ')
         for i in grp2[s]:
             if not visited[i]:
@@ -35,6 +33,7 @@ def dfs_r(s):
             dfs_r(i)
     return
 
+# BFS
 def bfs(s):
     Q = []
     Q.append(s)
