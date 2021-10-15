@@ -30,6 +30,7 @@ for tc in range(1, T+1):
     for i in range(0, len(lst), 2):
         G[lst[i]].append(lst[i+1])
         G[lst[i+1]].append(lst[i])
+    # print(G)
     visited = [False]*(N+1)
     cnt = 0
     for i in range(1, N+1):
