@@ -5,7 +5,7 @@
 1) ForeignKey는 부모 테이블의 데이터를 참조하기 위한 키이다. 
    - T (부모테이블을 참조하기 위해 외래키를 사용한다.)
 2) 1:N 관계에서 1은 N의 데이터를 직접 참조 할 수 있다. 
-   * F (N개의 데이터가 1개의 데이터를 참조한다.)
+   * F (API를 통해 참조해야 한다.)
 3) on_delete 속성은 ForeignKey 필드의 필수 인자이다.
    * T (참조하는 객체가 사라졌을때 외래키를 가진 객체를 어떻게 할지 정의해야 하기 때문에 반드시 필요하다.)
 4) 1:N 관계에서 외래 키는 반드시 부모 테이블의 PrimaryKey여야 한다
@@ -18,7 +18,7 @@
 다음과 같이 이름이 articles인 app의 models.py에 작성된 코드를 바탕으로 테이블이 만들어 졌을 때, 데이터베이스에 저장되는 ForeignKey 컬럼의 이름과 테이블의 이름이 무엇인지 작성하시오.
 
 * 컬럼의 이름 : answer_id
-* 테이블의 이름 : answer_comment
+* 테이블의 이름 : articles_comment
 
 
 
@@ -26,9 +26,9 @@
 
  위 2번 문제 모델 관계를 바탕으로 어느 template 페이지가 다음과 같이 작성되어 있을 때, 질문(Question)에 작성된 모든 댓글(Comment)을 출력하고자 한다. 해당 template에서 Question 객체를 사용할 수 있다면 빈칸 __(a)__에 들어갈 알맞은 코드를 작성하시오.
 
-* (a) : comments
+* (a) : question.comment_set.all
 
-
+  
 
 ### 4. next parameter 
 
@@ -39,7 +39,7 @@
 1. redirect된 로그인 페이지에서 로그인에 성공했을 때 발생하는 HTTP response status code를 작성하고, 이 오류가 발생한 원인을 작성하시오.
 
    * "HTTP ERROR 405" 발생
-
+   * 데코레이터가 두 개가 동시에 사용되어 오류가 난다. login이 안되어있으면 먼저 저렇게 url이 생성되고, 로그인 후 GET방식으로 redirect한다.
    * 바로 `/articles/1/delete/`로  redirect 가 되면 POST method가 아니기 때문에 명령이 실행되지 않고 오류가 난다.
 
 2. 위에서 발생한 오류를 해결하기 위해 다음과 같이 동작하는 코드로 수정하시오. 
