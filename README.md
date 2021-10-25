@@ -42,6 +42,7 @@
 | 09-06 | django - Form/ModelForm          |  ★   |
 | 09-08 | django - Managing Static Files   |  ★   |
 | 09-15 | django - Authentication System   |  ★   |
+| 10-25 | django - REST API                |  ★   |
 
 ### ◆ DB
 
@@ -69,6 +70,7 @@
 | 08-06 | 관통 PJT 3 - Web - 반응형 웹 페이지 구성                 | ★    |
 | 09-03 | 관통 PJT 4 - django -프레임워크 기반 웹 페이지(TV) 구현  | ★    |
 | 09-10 | 관통 PJT 5 - django - DB를 활용한 웹 페이지 구현         | ★    |
+| 10-22 | 관통 PJT 6 - django - 관계형 DB설계                      | ★    |
 
 
 

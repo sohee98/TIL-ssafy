@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>HOME</h1>
+<h2>평점 평균 => {{ rank_avg|stringformat:'.2f' }}</h2>
+
+<ul>
+{% for review in reviews %}
+  <li>
+    {{ review.author.username }}: 
+    <a href="{% url 'community:review_detail' review.pk %}">{{ review.title }}</a> [{{ review.comment_count }}]
+  </li>
+{% empty %}
+  <li>
+    No reviews.. YET
+  </li>
+{% endfor %}
+
+</ul>
+
+{% endblock content %}

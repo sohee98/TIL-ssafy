@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+Review DETAIL
+{% comment %} 제목 {% endcomment %}
+<h1>{{ review.title }}</h1>
+{% comment %} 별점 {% endcomment %}
+<h2>{{ review.get_rank_display }}</h2>
+{% comment %} 내용 {% endcomment %}
+<p>{{ review.content|linebreaksbr }}</p>
+{% comment %} 좋아요 버튼 {% endcomment %}
+<form action="{% url 'community:like_review' review.pk %}" method="POST">
+  {% csrf_token %}
+  <button>:)</button> ({{ review.like_users.count }})
+</form>
+{% comment %} 싫어요 버튼 {% endcomment %}
+<form action="{% url 'community:dislike_review' review.pk %}" method="POST">
+  {% csrf_token %}
+  <button>:(</button> ({{ review.dislike_users.count }})
+</form>
+
+{% comment %} 댓글 목록 {% endcomment %}
+{% include 'community/review/_comment_list.html' %}
+
+{% comment %} 댓글 작성 form {% endcomment %}
+{% include 'community/review/_comment_form.html' %}
+
+
+
+{% endblock content %}

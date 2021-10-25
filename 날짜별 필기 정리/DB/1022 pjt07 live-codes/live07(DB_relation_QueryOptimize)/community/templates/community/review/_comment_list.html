@@ -1,0 +1,19 @@
+<ul>
+{% for comment in review.comment_set.all %}
+  <li>
+    <a href="{% url 'accounts:profile' comment.author.username %}">
+      {{ comment.author }}
+    </a>: {{ comment.content }}
+    
+    {% if request.user == comment.author %}
+    <form style="display: inline-block;" action="{% url 'community:delete_comment' review.pk comment.pk %}" method="POST">
+      {% csrf_token %}
+      <button>[X]</button>
+    </form>
+    {% endif %}
+
+  </li>
+{% empty %}
+  <li>No comments... YET</li>
+{% endfor %}
+</ul>

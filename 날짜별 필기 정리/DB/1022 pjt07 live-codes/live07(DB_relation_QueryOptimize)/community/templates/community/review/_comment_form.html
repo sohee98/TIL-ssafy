@@ -1,0 +1,13 @@
+{% if request.user.is_authenticated %}
+<form action="{% url 'community:create_comment' review.pk %}" method="POST">
+  {% csrf_token %}  
+  {{ form }}
+  <button>comment</button>
+</form>
+{% else %}
+<form action="">
+  conetnt: <input type="text" disabled value="댓글 쓰려면 로그인 하세요">
+
+</form>
+{% endif %}
+

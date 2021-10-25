@@ -1,0 +1,23 @@
+<nav>
+  <a href="{% url 'community:review_index' %}">HOME</a>
+  <ul>
+    {% if request.user.is_authenticated %}
+    <li>
+      <a href="{% url 'community:create_review' %}">NEW</a>
+    </li>
+    <li>
+      <a href="{% url 'accounts:profile' request.user.username %}">{{request.user.username}}'s PROFILE</a>
+    </li>
+    <li>
+      <a href="{% url 'accounts:logout' %}">LOGOUT</a>
+    </li>
+    {% else %}
+    <li>
+      <a href="{% url 'accounts:login' %}">LOGIN</a>
+    </li>
+    <li>
+      <a href="{% url 'accounts:signup' %}">SIGNUP</a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
