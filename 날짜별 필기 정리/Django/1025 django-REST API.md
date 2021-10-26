@@ -173,7 +173,7 @@
 
    <img src="md-images/image-20211025132427402.png" alt="image-20211025132427402" style="zoom:67%;" />
 
-* #### GET - Article Detail
+* #### 2. GET - Article Detail
 
    <img src="md-images/image-20211025132510845.png" alt="image-20211025132510845" style="zoom:67%;" />
 
@@ -216,7 +216,203 @@
 
 
 
-
-
 ## [5] 1:N Relation
 
+* DRF with 1:N Relation
+  * 1:N 관계에서의 모델 data를 직렬화하여 JSON으로 변환하는 방법에 대한 학습
+  * 2개 이상의 1:N 관계를 맺는 모델을 두고 CRUD 로직을 수행 가능하도록 설계하기
+
+* Comment 모델 작성
+
+  ```python
+  class Comment(models.Model):
+      article = models.ForeignKey(Article, on_delete=models.CASCADE)
+      content = models.TextField()
+      created_at = models.DateTimeField(auto_now_add=True)
+      updated_at = models.DateTimeField(auto_now=True)
+  ```
+
+  * migration 작업 후 data seed 진행
+
+  ```bash
+  $ python manage.py seed articles --number=20
+  ```
+
+
+
+* #### 1. GET - Comment List
+
+    ```python
+    # articles/serializers.py
+    class CommentSerializer(serializers.ModelSerializer):
+    
+        class Meta:
+            model = Comment
+            fields = '__all__'
+     
+    # views.py
+    @api_view(['GET'])
+    def comment_list(request):
+        comments = get_list_or_404(Comment)
+        serializer = CommentSerializer(comments, many=True)
+        return Response(serializer.data)
+    ```
+    
+    * http://127.0.0.1:8000/api/v1/comments/로 GET 요청
+
+
+
+* #### 2. GET - Comment Detail
+
+  ```python
+  # views.py
+  @api_view(['GET'])
+  def comment_detail(request, comment_pk):
+      comments = get_object_or_404(Comment, pk=comment_pk)
+      serializer = CommentSerializer(comments)
+      return Response(serializer.data)
+  ```
+
+  * http://127.0.0.1:8000/api/v1/comments/1/로 GET 요청
+
+
+
+* #### 3. POST - Create Comment
+
+  ```python
+  # views.py
+  @api_view(['POST'])
+  def comment_create(request, article_pk):
+      article = get_object_or_404(Article, pk=article_pk)
+      serializer = CommentSerializer(data=request.data)
+      if serializer.is_valid(raise_exception=True):
+          serializer.save(article=article)
+          return Response(serializer.data, status=status.HTTP_201_CREATED)
+  ```
+
+  * Passing Additional attributes to `.save()`
+
+    * 특정 Serializer 인스턴스를 저장하는 과정에서 추가적인 데이터를 받을 수 있음
+
+  * http://127.0.0.1:8000/api/v1/articles/1/comments/로 POST 요청 재시도
+
+  * Read Only Field 읽기 전용 필드
+
+    ```python
+    class CommentSerializer(serializers.ModelSerializer):
+    
+        class Meta:
+            model = Comment
+            fields = '__all__'
+            read_only_fields = ('article',)
+    ```
+
+    * 어떤 게시글에 작성하는 댓글인지에 대한 정보를 form-data로 넘겨주지 않았기 때문에 직렬화하는 과정에서 article 필드가 유효성검사를 통과하지 못함
+    * 이때는 읽기 전용 필드 설정을 통해 직렬화하지 않고 반환값에만 해당 필드가 포함될 수 있도록 설정할 수 있음
+
+
+
+* #### 4. DELETE&PUT - delete, update Comment
+
+  ```python
+  # views.py
+  @api_view(['GET', 'DELETE', 'PUT'])
+  def comment_detail(request, comment_pk):
+      comment = get_object_or_404(Comment, pk=comment_pk)
+      
+      if request.method == 'GET':
+          serializer = ArticleSerializer(comment)
+          return Response(serializer.data)
+  
+      elif request.method == 'DELETE':
+          comment.delete()
+          data = {
+              'delete': f'댓글 {comment_pk}번이 삭제되었습니다.'
+          }
+          return Response(data, status=status.HTTP_204_NO_CONTENT)
+  
+      elif request.method == 'PUT':
+          serializer = CommentSerializer(comment, data=request.data)
+          if serializer.is_valid(raise_exception=True):
+              serializer.save()
+              return Response(serializer.data)
+  ```
+
+  * http://127.0.0.1:8000/api/v1/comments/2/로 DELETE 요청 후 응답 확인
+  * http://127.0.0.1:8000/api/v1/comments/3/로 PUT 요청 후 응답 확인
+
+
+
+### 1:N Serializer
+
+#### 1. 특정 게시글에 작성된 댓글 목록 출력하기
+
+* Seializer는 기존 필드를 override하거나 추가 필드를 구성할 수 있음
+
+* (1) PrimaryKeyRelatedField
+
+  ```python
+  # serializers.py
+  class ArticleSerializer(serializers.ModelSerializer):
+      comments = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+  
+      class Meta:
+          model = Article
+          fields = '__all__'
+          
+  # models.py
+  article = models.ForeignKey(...related_name='comments'),
+  ```
+
+  > 필드가 to many relationships(N)를 나타내는데 사용되는 경우 many=True 필요
+
+  * http://127.0.0.1:8000/api/v1/articles/1/로 GET 요청
+
+* (2) Nested relationships
+
+  ```python
+  # serializers.py
+  class ArticleSerializer(serializers.ModelSerializer):
+      comment_set = CommentSerializer(many=True, read_only=True)
+      
+      class Meta:
+          model = Article
+          fields = '__all__'
+  ```
+
+  * http://127.0.0.1:8000/api/v1/articles/1/로 GET 요청
+
+
+
+#### 2. 특정 게시글에 작성된 댓글의 개수 구하기
+
+```python
+# serializers.py
+class ArticleSerializer(serializers.ModelSerializer):
+    comment_set = CommentSerializer(many=True, read_only=True)
+    comment_count = serializers.IntegerField(source='comment_set.count', read_only=True)
+
+    class Meta:
+        model = Article
+        fields = '__all__'
+```
+
+* 'source' arguments
+  * 필드를 채우는데 사용 할 속성의 이름
+  * 점 표기법을 사용하여 속성을 탐색할 수 있음
+  * comment_set이라는 필드에 . 을 통해 전체 댓글의 개수 확인 가능
+  * .count()는 built-in Queryset API 중 하나
+
+* http://127.0.0.1:8000/api/v1/articles/1/로 GET 요청
+
+
+
+
+
+* #### 주의사항 'read_only_fields' shortcut issue
+
+  * 특정 필드를 override 혹은 추가한 경우 read_only_fields shortcut으로 사용할 수 없음
+
+  
+
+  
