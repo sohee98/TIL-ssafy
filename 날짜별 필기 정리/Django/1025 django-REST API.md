@@ -2,9 +2,9 @@
 
 ## [1] HTTP
 
- <img src="C:/Users/sohee/AppData/Roaming/Typora/typora-user-images/image-20211025110142627.png" alt="image-20211025110142627" style="zoom:67%;" />
+ <img src="md-images/image-20211025110142627.png" alt="image-20211025110142627" style="zoom:67%;" />
 
-<img src="C:/Users/sohee/AppData/Roaming/Typora/typora-user-images/image-20211025110214844.png" alt="image-20211025110214844" style="zoom:80%;" />
+<img src="md-images/image-20211025110214844.png" alt="image-20211025110214844" style="zoom:80%;" />
 
 
 
@@ -20,15 +20,15 @@
   * HTTP 요청의 대상 = 리소스 (자원) : 문서, 사진, 어떤 것이든 될 수 있음
   * 리소스 식별을 위해 URI로 식별됨
 
- <img src="C:/Users/sohee/AppData/Roaming/Typora/typora-user-images/image-20211025110607586.png" alt="image-20211025110607586" style="zoom:67%;" />
+ <img src="md-images/image-20211025110607586.png" alt="image-20211025110607586" style="zoom:67%;" />
 
 ### URI
 
- <img src="C:/Users/sohee/AppData/Roaming/Typora/typora-user-images/image-20211025110627995.png" alt="image-20211025110627995" style="zoom: 67%;" />
+ <img src="md-images/image-20211025110627995.png" alt="image-20211025110627995" style="zoom: 67%;" />
 
 * 구조
 
-  <img src="C:/Users/sohee/AppData/Roaming/Typora/typora-user-images/image-20211025111124652.png" alt="image-20211025111124652" style="zoom: 67%;" />
+  <img src="md-images/image-20211025111124652.png" alt="image-20211025111124652" style="zoom: 67%;" />
 
   * Scheme (protocol) : 브라우저가 사용해야 하는 프로토콜
     * http(s), data, file, ftp, malito
@@ -48,23 +48,23 @@
 
 * API
 
-   <img src="C:/Users/sohee/AppData/Roaming/Typora/typora-user-images/image-20211025111209827.png" alt="image-20211025111209827" style="zoom:67%;" />
+   <img src="md-images/image-20211025111209827.png" alt="image-20211025111209827" style="zoom:67%;" />
 
   
 
 * REST
 
-   <img src="C:/Users/sohee/AppData/Roaming/Typora/typora-user-images/image-20211025111241211.png" alt="image-20211025111241211" style="zoom:67%;" />
+   <img src="md-images/image-20211025111241211.png" alt="image-20211025111241211" style="zoom:67%;" />
 
-   <img src="C:/Users/sohee/AppData/Roaming/Typora/typora-user-images/image-20211025111316875.png" alt="image-20211025111316875" style="zoom:67%;" />
+   <img src="md-images/image-20211025111316875.png" alt="image-20211025111316875" style="zoom:67%;" />
 
-   <img src="C:/Users/sohee/AppData/Roaming/Typora/typora-user-images/image-20211025111415922.png" alt="image-20211025111415922" style="zoom:67%;" />
+   <img src="md-images/image-20211025111415922.png" alt="image-20211025111415922" style="zoom:67%;" />
 
 
 
 * JSON
 
-   <img src="C:/Users/sohee/AppData/Roaming/Typora/typora-user-images/image-20211025111331971.png" alt="image-20211025111331971" style="zoom:67%;" />
+   <img src="md-images/image-20211025111331971.png" alt="image-20211025111331971" style="zoom:67%;" />
 
 
 
@@ -167,23 +167,25 @@
 
   <img src="md-images/image-20211025132235071.png" alt="image-20211025132235071" style="zoom: 67%;" />
 
-* #### 1. GET - Article List
+  
 
-  <img src="md-images/image-20211025132547883.png" alt="image-20211025132547883" style="zoom: 67%;" />
+#### 1. GET - Article List
 
-   <img src="md-images/image-20211025132427402.png" alt="image-20211025132427402" style="zoom:67%;" />
+<img src="md-images/image-20211025132547883.png" alt="image-20211025132547883" style="zoom: 67%;" />
 
-* #### 2. GET - Article Detail
+<img src="md-images/image-20211025132427402.png" alt="image-20211025132427402" style="zoom:67%;" />
 
-   <img src="md-images/image-20211025132510845.png" alt="image-20211025132510845" style="zoom:67%;" />
+#### 2. GET - Article Detail
 
-  <img src="md-images/image-20211025132612043.png" alt="image-20211025132612043" style="zoom: 67%;" />
+<img src="md-images/image-20211025132510845.png" alt="image-20211025132510845" style="zoom:67%;" />
 
-* #### 3. POST - Create Article
+<img src="md-images/image-20211025132612043.png" alt="image-20211025132612043" style="zoom: 67%;" />
 
-   <img src="md-images/image-20211025132641706.png" alt="image-20211025132641706" style="zoom:67%;" />
+#### 3. POST - Create Article
 
-  ![image-20211025132709041](md-images/image-20211025132709041.png)
+ <img src="md-images/image-20211025132641706.png" alt="image-20211025132641706" style="zoom:67%;" />
+
+![image-20211025132709041](md-images/image-20211025132709041.png)
 
 <img src="md-images/image-20211025132720466.png" alt="image-20211025132720466" style="zoom:67%;" />
 
@@ -197,20 +199,20 @@
 
 
 
-* #### 4. DELETE - Delete Article
+#### 4. DELETE - Delete Article
 
-  <img src="md-images/image-20211025132920851.png" alt="image-20211025132920851" style="zoom:67%;" />
+<img src="md-images/image-20211025132920851.png" alt="image-20211025132920851" style="zoom:67%;" />
 
-  > http://127.0.0.1:8000/api/v1/articles/1/
+> http://127.0.0.1:8000/api/v1/articles/1/
 
 
 
-* #### 5. PUT - Update Article
+#### 5. PUT - Update Article
 
-  <img src="md-images/image-20211025132944619.png" alt="image-20211025132944619" style="zoom:67%;" />
+<img src="md-images/image-20211025132944619.png" alt="image-20211025132944619" style="zoom:67%;" />
 
-  * HTTP body에 form-data로 title과 content 수정 데이터 작성
-  * http://127.0.0.1:8000/api/v1/articles/1/
+* HTTP body에 form-data로 title과 content 수정 데이터 작성
+* http://127.0.0.1:8000/api/v1/articles/1/
 
 
 
@@ -240,106 +242,106 @@
 
 
 
-* #### 1. GET - Comment List
+#### 1. GET - Comment List
 
-    ```python
-    # articles/serializers.py
-    class CommentSerializer(serializers.ModelSerializer):
+```python
+# articles/serializers.py
+class CommentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Comment
+        fields = '__all__'
+ 
+# views.py
+@api_view(['GET'])
+def comment_list(request):
+    comments = get_list_or_404(Comment)
+    serializer = CommentSerializer(comments, many=True)
+    return Response(serializer.data)
+```
+
+* http://127.0.0.1:8000/api/v1/comments/로 GET 요청
+
+
+
+#### 2. GET - Comment Detail
+
+```python
+# views.py
+@api_view(['GET'])
+def comment_detail(request, comment_pk):
+    comments = get_object_or_404(Comment, pk=comment_pk)
+    serializer = CommentSerializer(comments)
+    return Response(serializer.data)
+```
+
+* http://127.0.0.1:8000/api/v1/comments/1/로 GET 요청
+
+
+
+#### 3. POST - Create Comment
+
+```python
+# views.py
+@api_view(['POST'])
+def comment_create(request, article_pk):
+    article = get_object_or_404(Article, pk=article_pk)
+    serializer = CommentSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save(article=article)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+```
+
+* Passing Additional attributes to `.save()`
+
+  * 특정 Serializer 인스턴스를 저장하는 과정에서 추가적인 데이터를 받을 수 있음
+
+* http://127.0.0.1:8000/api/v1/articles/1/comments/로 POST 요청 재시도
+
+* Read Only Field 읽기 전용 필드
+
+  ```python
+  class CommentSerializer(serializers.ModelSerializer):
+  
+      class Meta:
+          model = Comment
+          fields = '__all__'
+          read_only_fields = ('article',)
+  ```
+
+  * 어떤 게시글에 작성하는 댓글인지에 대한 정보를 form-data로 넘겨주지 않았기 때문에 직렬화하는 과정에서 article 필드가 유효성검사를 통과하지 못함
+  * 이때는 읽기 전용 필드 설정을 통해 직렬화하지 않고 반환값에만 해당 필드가 포함될 수 있도록 설정할 수 있음
+
+
+
+#### 4. DELETE&PUT - delete, update Comment
+
+```python
+# views.py
+@api_view(['GET', 'DELETE', 'PUT'])
+def comment_detail(request, comment_pk):
+    comment = get_object_or_404(Comment, pk=comment_pk)
     
-        class Meta:
-            model = Comment
-            fields = '__all__'
-     
-    # views.py
-    @api_view(['GET'])
-    def comment_list(request):
-        comments = get_list_or_404(Comment)
-        serializer = CommentSerializer(comments, many=True)
+    if request.method == 'GET':
+        serializer = ArticleSerializer(comment)
         return Response(serializer.data)
-    ```
-    
-    * http://127.0.0.1:8000/api/v1/comments/로 GET 요청
 
+    elif request.method == 'DELETE':
+        comment.delete()
+        data = {
+            'delete': f'댓글 {comment_pk}번이 삭제되었습니다.'
+        }
+        return Response(data, status=status.HTTP_204_NO_CONTENT)
 
+    elif request.method == 'PUT':
+        serializer = CommentSerializer(comment, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data)
+```
 
-* #### 2. GET - Comment Detail
-
-  ```python
-  # views.py
-  @api_view(['GET'])
-  def comment_detail(request, comment_pk):
-      comments = get_object_or_404(Comment, pk=comment_pk)
-      serializer = CommentSerializer(comments)
-      return Response(serializer.data)
-  ```
-
-  * http://127.0.0.1:8000/api/v1/comments/1/로 GET 요청
-
-
-
-* #### 3. POST - Create Comment
-
-  ```python
-  # views.py
-  @api_view(['POST'])
-  def comment_create(request, article_pk):
-      article = get_object_or_404(Article, pk=article_pk)
-      serializer = CommentSerializer(data=request.data)
-      if serializer.is_valid(raise_exception=True):
-          serializer.save(article=article)
-          return Response(serializer.data, status=status.HTTP_201_CREATED)
-  ```
-
-  * Passing Additional attributes to `.save()`
-
-    * 특정 Serializer 인스턴스를 저장하는 과정에서 추가적인 데이터를 받을 수 있음
-
-  * http://127.0.0.1:8000/api/v1/articles/1/comments/로 POST 요청 재시도
-
-  * Read Only Field 읽기 전용 필드
-
-    ```python
-    class CommentSerializer(serializers.ModelSerializer):
-    
-        class Meta:
-            model = Comment
-            fields = '__all__'
-            read_only_fields = ('article',)
-    ```
-
-    * 어떤 게시글에 작성하는 댓글인지에 대한 정보를 form-data로 넘겨주지 않았기 때문에 직렬화하는 과정에서 article 필드가 유효성검사를 통과하지 못함
-    * 이때는 읽기 전용 필드 설정을 통해 직렬화하지 않고 반환값에만 해당 필드가 포함될 수 있도록 설정할 수 있음
-
-
-
-* #### 4. DELETE&PUT - delete, update Comment
-
-  ```python
-  # views.py
-  @api_view(['GET', 'DELETE', 'PUT'])
-  def comment_detail(request, comment_pk):
-      comment = get_object_or_404(Comment, pk=comment_pk)
-      
-      if request.method == 'GET':
-          serializer = ArticleSerializer(comment)
-          return Response(serializer.data)
-  
-      elif request.method == 'DELETE':
-          comment.delete()
-          data = {
-              'delete': f'댓글 {comment_pk}번이 삭제되었습니다.'
-          }
-          return Response(data, status=status.HTTP_204_NO_CONTENT)
-  
-      elif request.method == 'PUT':
-          serializer = CommentSerializer(comment, data=request.data)
-          if serializer.is_valid(raise_exception=True):
-              serializer.save()
-              return Response(serializer.data)
-  ```
-
-  * http://127.0.0.1:8000/api/v1/comments/2/로 DELETE 요청 후 응답 확인
-  * http://127.0.0.1:8000/api/v1/comments/3/로 PUT 요청 후 응답 확인
+* http://127.0.0.1:8000/api/v1/comments/2/로 DELETE 요청 후 응답 확인
+* http://127.0.0.1:8000/api/v1/comments/3/로 PUT 요청 후 응답 확인
 
 
 
