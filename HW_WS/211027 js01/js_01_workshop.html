@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="#">
+    <input type="text">
+    <button>Add</button>
+  </form>
+  <ul>
+
+  </ul>
+  
+  <script>
+    function addTodo(todo) {
+      // input 선택 및 value 값 선택
+      const input = document.querySelector('input')
+      const content = input.value
+      
+      if (content.trim()) {
+        // <li> tag 만들기
+        const liTag = document.createElement('li')
+        liTag.innerText = content
+    
+        // <ul> 안에 <li> 넣기
+        const ulTag = document.querySelector('ul')
+        ulTag.appendChild(liTag)
+      } else {
+        alert('할 일을 입력해주세요.')
+      }
+      event.target.reset()
+    }
+
+    const form = document.querySelector('form')
+    form.addEventListener('submit', addTodo)
+
+  </script>
+</body>
+</html>
