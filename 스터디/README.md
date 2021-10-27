@@ -26,7 +26,8 @@
 | 10-13 | SWEA d3 - 2806 N-Queen<br/>SWEA d3 - 5431 민석이의 과제 체크하기<br/>백준 - 1057 토너먼트<br />백준 - 17281 야구공 |                              ■                               |
 | 10-20 | SWEA d3 - 2817 부분수열의 합<br />백준 - 6603 로또<br />백준 - 1260 DFS와 BFS |                              ■                               |
 | 10-25 | SWEA d5 - 10204 초밥식사 <br/>SWEA d4 - 10947 카나페<br />백준 - 1012 유기농 배추 | [초밥식사](https://github.com/AlgorithmStudy-SSAFY/SWEA/tree/main/difficulty%205/10204_%EC%B4%88%EB%B0%A5%20%EC%8B%9D%EC%82%AC)<br />[카나페](https://github.com/AlgorithmStudy-SSAFY/SWEA/tree/main/difficulty%204/10947_%EC%B9%B4%EB%82%98%ED%8E%98)<br />[유기농배추](https://github.com/AlgorithmStudy-SSAFY/BaekJoon/tree/main/1012_%EC%9C%A0%EA%B8%B0%EB%86%8D%EB%B0%B0%EC%B6%94) |
-| 10-27 | SWEA d3 5601 - 쥬스 나누기<br />백준 - 11586 지영공주님의 마법거울 | [쥬스 나누기](https://github.com/AlgorithmStudy-SSAFY/SWEA/tree/main/difficulty%203/5601_%EC%A5%AC%EC%8A%A4%20%EB%82%98%EB%88%84%EA%B8%B0)<br />[지영공주님의 마법거울](https://github.com/AlgorithmStudy-SSAFY/BaekJoon/tree/main/11586_%EC%A7%80%EC%98%81%EA%B3%B5%EC%A3%BC%EB%8B%98%EC%9D%98%20%EB%A7%88%EB%B2%95%EA%B1%B0%EC%9A%B8) |
+| 10-27 | SWEA d3 5601 - 쥬스 나누기<br />백준 - 11586 지영공주님의 마법거울<br />백준 - 14503 로봇청소기 | [쥬스 나누기](https://github.com/AlgorithmStudy-SSAFY/SWEA/tree/main/difficulty%203/5601_%EC%A5%AC%EC%8A%A4%20%EB%82%98%EB%88%84%EA%B8%B0)<br />[지영공주님의 마법거울](https://github.com/AlgorithmStudy-SSAFY/BaekJoon/tree/main/11586_%EC%A7%80%EC%98%81%EA%B3%B5%EC%A3%BC%EB%8B%98%EC%9D%98%20%EB%A7%88%EB%B2%95%EA%B1%B0%EC%9A%B8)<br />[로봇청소기](https://github.com/AlgorithmStudy-SSAFY/BaekJoon/tree/main/14503_%EB%A1%9C%EB%B4%87%EC%B2%AD%EC%86%8C%EA%B8%B0) |
+|       |                                                              |                                                              |
 
 
 
