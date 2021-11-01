@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+  <br>
+  <h1 class='fw-bold'>{{ movie.title }}</h1>
+  <hr>
+  <p>줄거리 : {{ movie.overview }}</p>
+  <div>
+    <img src="{{ movie.poster_path }}" art="{{ movie.title }} poster image"></img>
+  </div>
+  <br>
+  <p class='fw-light'>작성 시간 : {{ movie.created_at }}</p>
+  <p class='fw-light'>수정 시간 : {{ movie.updated_at }}</p>
+
+  <div class='d-inline'>
+    <a type='button' class="btn btn-primary" href="{% url 'movies:edit' movie.pk %}">
+      수정
+    </a>
+  </div>
+  <form class='d-inline' action="{% url 'movies:delete' movie.pk %}" method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger">삭제</button>
+  </form> 
+  <a type='button' class='btn btn-secondary d-inline' href="{% url 'movies:index' %}">취소</a>
+
+
+{% endblock content %}

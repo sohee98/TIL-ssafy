@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1 class="fw-bold">New Movie</h1>
+  <form action="{% url 'movies:update' movie.pk %}" method="POST" class='d-inline'>
+    {% csrf_token %}
+    <div>
+      <label for='title'>Title: </label>
+      <input id='title' name='title' type'text' value='{{ movie.title }}'> 
+    </div>
+    <div>
+      <label for='overview'>Overview: </label>
+      <textarea name='overview' id='overview' cols="30" rows="10">{{ movie.overview }}</textarea> 
+    </div>
+    <div>
+      <label for='poster_path'>Poster-path: </label>
+      <input id='poster_path' name='poster_path' type'text' value='{{ movie.poster_path }}'> 
+    </div>
+    <br>
+    <button class="btn btn-secondary">저장</button>
+  </form>
+  <a type='button' class='btn btn-secondary d-inline' href="{% url 'movies:index' %}">취소</a>
+{% endblock content %}

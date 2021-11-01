@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Movies</h1>
+<form action="{% url 'movies:create' %}" method="POST">
+  {% csrf_token %}
+  {% for field in form %}
+    {% if field.errors %}
+      {% for error in field.errors %}
+        <div class="alert alert-warning" role="alert">{{ error|escape }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  <p>
+    {{ form.as_p }}
+  </p>
+  <button class="btn btn-secondary">작성</button>
+</form>
+<hr>
+<a type='button' class='btn btn-secondary d-inline' href="{% url 'movies:index' %}">뒤로</a>
+{% endblock content %}
+
+
+
+
+
+    

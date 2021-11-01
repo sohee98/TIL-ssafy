@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+  <br>
+  <h1 class="fw-bold">영화 목록</h1>
+  <hr>
+  <ul>
+    {% for movie in movies %}
+    <li>
+      <p class='d-inline fs-4'>제목 : </p>
+      <a class='d-inline fs-4' href="{% url 'movies:detail' movie.pk %}">{{ movie.title }}</a>
+      <p></p>
+      <p>줄거리 : {{ movie.overview }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+
+{% endblock content %}
