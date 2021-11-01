@@ -1,6 +1,8 @@
 ## 알고리즘 스터디
 
-| 날짜  | 문제                                                         |                             완료                             |
+스터디원 : 김소희, 문찬송, 손민기, 송상빈, 이윤영, 이은성, 이주용, 최현준, 하지애
+
+| 날짜  | 문제                                                         |                             링크                             |
 | :---: | ------------------------------------------------------------ | :----------------------------------------------------------: |
 | 08-01 | SWEA d1 - 2063, 2058, 2070, 2071, 2072                       |                              ■                               |
 | 08-02 | SWEA d1 - 2043, 1938, 2050, 2056<br />백준 - 2884, 14681, 2753, 9498, 1330 |                              ■                               |
@@ -26,7 +28,8 @@
 | 10-13 | SWEA d3 - 2806 N-Queen<br/>SWEA d3 - 5431 민석이의 과제 체크하기<br/>백준 - 1057 토너먼트<br />백준 - 17281 야구공 |                              ■                               |
 | 10-20 | SWEA d3 - 2817 부분수열의 합<br />백준 - 6603 로또<br />백준 - 1260 DFS와 BFS |                              ■                               |
 | 10-25 | SWEA d5 - 10204 초밥식사 <br/>SWEA d4 - 10947 카나페<br />백준 - 1012 유기농 배추 | [초밥식사](https://github.com/AlgorithmStudy-SSAFY/SWEA/tree/main/difficulty%205/10204_%EC%B4%88%EB%B0%A5%20%EC%8B%9D%EC%82%AC)<br />[카나페](https://github.com/AlgorithmStudy-SSAFY/SWEA/tree/main/difficulty%204/10947_%EC%B9%B4%EB%82%98%ED%8E%98)<br />[유기농배추](https://github.com/AlgorithmStudy-SSAFY/BaekJoon/tree/main/1012_%EC%9C%A0%EA%B8%B0%EB%86%8D%EB%B0%B0%EC%B6%94) |
-| 10-27 | SWEA d3 5601 - 쥬스 나누기<br />백준 - 11586 지영공주님의 마법거울<br />백준 - 14503 로봇청소기 | [쥬스 나누기](https://github.com/AlgorithmStudy-SSAFY/SWEA/tree/main/difficulty%203/5601_%EC%A5%AC%EC%8A%A4%20%EB%82%98%EB%88%84%EA%B8%B0)<br />[지영공주님의 마법거울](https://github.com/AlgorithmStudy-SSAFY/BaekJoon/tree/main/11586_%EC%A7%80%EC%98%81%EA%B3%B5%EC%A3%BC%EB%8B%98%EC%9D%98%20%EB%A7%88%EB%B2%95%EA%B1%B0%EC%9A%B8)<br />[로봇청소기](https://github.com/AlgorithmStudy-SSAFY/BaekJoon/tree/main/14503_%EB%A1%9C%EB%B4%87%EC%B2%AD%EC%86%8C%EA%B8%B0) |
+| 10-27 | SWEA d3 - 5601 쥬스 나누기<br />백준 - 11586 지영공주님의 마법거울<br />백준 - 14503 로봇청소기 | [쥬스 나누기](https://github.com/AlgorithmStudy-SSAFY/SWEA/tree/main/difficulty%203/5601_%EC%A5%AC%EC%8A%A4%20%EB%82%98%EB%88%84%EA%B8%B0)<br />[지영공주님의 마법거울](https://github.com/AlgorithmStudy-SSAFY/BaekJoon/tree/main/11586_%EC%A7%80%EC%98%81%EA%B3%B5%EC%A3%BC%EB%8B%98%EC%9D%98%20%EB%A7%88%EB%B2%95%EA%B1%B0%EC%9A%B8)<br />[로봇청소기](https://github.com/AlgorithmStudy-SSAFY/BaekJoon/tree/main/14503_%EB%A1%9C%EB%B4%87%EC%B2%AD%EC%86%8C%EA%B8%B0) |
+| 11-01 | SWEA d3 - 5948 새샘이의 7-3-5 게임<br/>SWEA d3 - 5215 햄버거 다이어트<br />백준 - 1003 피보나치 함수<br/>백준 - 3584 가장 가까운 공통 조상 | [새샘이의 7-3-5게임](https://github.com/AlgorithmStudy-SSAFY/SWEA/tree/main/difficulty%203/5948_%EC%83%88%EC%83%98%EC%9D%B4%EC%9D%98735%EA%B2%8C%EC%9E%84)<br />[햄버거 다이어트](https://github.com/AlgorithmStudy-SSAFY/SWEA/tree/main/difficulty%203/5215_%ED%96%84%EB%B2%84%EA%B1%B0%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8)<br />[피보나치 함수](https://github.com/AlgorithmStudy-SSAFY/BaekJoon/tree/main/1003_%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%ED%95%A8%EC%88%98)<br />[가장 가까운 공통 조상](https://github.com/AlgorithmStudy-SSAFY/BaekJoon/tree/main/3584_%EA%B0%80%EC%9E%A5%EA%B0%80%EA%B9%8C%EC%9A%B4%EA%B3%B5%ED%86%B5%EC%A1%B0%EC%83%81) |
 |       |                                                              |                                                              |
 
 
