@@ -35,8 +35,10 @@
 <script>
   const allForm = document.querySelectorAll('#like-form')
   // console.log(allForm)
-  for (var i=0; i<allForm.length; i++) {
-    const form = allForm.item(i)
+  // for (var i=0; i<allForm.length; i++) {
+    //const form = allForm.item(i)
+  allForm.forEach((form) => {
+    // console.log(form)
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
     form.addEventListener('submit', function(event) {
       event.preventDefault()
@@ -55,11 +57,13 @@
         likeButton.classList.toggle('btn-primary')
         likeButton.classList.toggle('btn-secondary')
         
-        if (isLiked) {
-          likeButton.innerText = '좋아요 취소'
-        } else {
-          likeButton.innerText = '좋아요'
-        }
+        likeButton.innerText = isLiked ? '좋아요 취소' : '좋아요'
+
+        // if (isLiked) {
+        //   likeButton.innerText = '좋아요 취소'
+        // } else {
+        //   likeButton.innerText = '좋아요'
+        // }
 
         const likeCount = document.querySelector(`#like-count-${articleId}`)
         if (like_count) {
@@ -69,7 +73,7 @@
         }
       })
     })
-  }
+  })
 
 
 </script>
