@@ -5,7 +5,7 @@
   <form action="{% url 'articles:update' article.pk %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <button>수정</button>
+    <input type="submit" value="수정">
   </form>
   <hr>
   <a href="{% url 'articles:index' %}">[back]</a>

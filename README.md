@@ -59,7 +59,7 @@
 | 10-27 | JavaScript01 - JS 기초 |  ★   |
 | 11-01 | JavaScript02 - JS 심화 |  ★   |
 
-### ◆ Vue
+### ◆ [Vue](https://github.com/sohee98/TIL/tree/master/%EB%82%A0%EC%A7%9C%EB%B3%84%20%ED%95%84%EA%B8%B0%20%EC%A0%95%EB%A6%AC/Vue)
 
 | 날짜  | 배운 내용                 | 필기 |
 | :---: | :------------------------ | :--: |
