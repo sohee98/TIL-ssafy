@@ -10,14 +10,14 @@
 | 07-26 | 파이썬 - 데이터 구조                   |  ★   |
 | 07-28 | 파이썬 - 모듈, OOP(객체지향프로그래밍) |  ★   |
 
-### ◆ Web
+### ◆ [Web](https://github.com/sohee98/TIL/tree/master/%EB%82%A0%EC%A7%9C%EB%B3%84%20%ED%95%84%EA%B8%B0%20%EC%A0%95%EB%A6%AC/Web)
 
 | 날짜  | 배운 내용                              | 필기 |
 | :---: | :------------------------------------- | :--: |
 | 08-02 | Web - HTML, CSS                        |  ★   |
 | 08-04 | Web - CSS Layout                       |  ★   |
 
-### ◆ Algorithm
+### ◆ [Algorithm](https://github.com/sohee98/TIL/tree/master/%EB%82%A0%EC%A7%9C%EB%B3%84%20%ED%95%84%EA%B8%B0%20%EC%A0%95%EB%A6%AC/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 | 날짜  | 배운 내용                          | 필기 |
 | :---: | :--------------------------------- | :--: |
@@ -33,7 +33,7 @@
 | 10-06 | 알고리즘 응용 - 분할정복, 백트래킹 |  ★   |
 | 10-13 | 알고리즘 응용 - 그래프, 백트래킹   |  ★   |
 
-### ◆ Django
+### ◆ [Django](https://github.com/sohee98/TIL/tree/master/%EB%82%A0%EC%A7%9C%EB%B3%84%20%ED%95%84%EA%B8%B0%20%EC%A0%95%EB%A6%AC/Django)
 
 | 날짜  | 배운 내용                        | 필기 |
 | :---: | :------------------------------- | :--: |
@@ -44,7 +44,7 @@
 | 09-15 | django - Authentication System   |  ★   |
 | 10-25 | django - REST API                |  ★   |
 
-### ◆ DB
+### ◆ [DB](https://github.com/sohee98/TIL/tree/master/%EB%82%A0%EC%A7%9C%EB%B3%84%20%ED%95%84%EA%B8%B0%20%EC%A0%95%EB%A6%AC/DB)
 
 | 날짜  | 배운 내용                     | 필기 |
 | :---: | ----------------------------- | :--: |
@@ -52,7 +52,7 @@
 | 10-18 | DB02 - 데이터베이스 관계(1:N) |  ★   |
 | 10-20 | DB03 - 데이터베이스 관계(M:N) |  ★   |
 
-### ◆ JavaScript
+### ◆ [JavaScript](https://github.com/sohee98/TIL/tree/master/%EB%82%A0%EC%A7%9C%EB%B3%84%20%ED%95%84%EA%B8%B0%20%EC%A0%95%EB%A6%AC/JavaScript)
 
 | 날짜  | 배운 내용              | 필기 |
 | :---: | :--------------------- | :--: |
@@ -74,7 +74,7 @@
 
 
 
-## SSAFY 1학기 프로젝트
+## [SSAFY 1학기 프로젝트](https://github.com/sohee98/TIL/tree/master/%EA%B4%80%ED%86%B5%20PJT)
 
 | 날짜  | 프로젝트 이름                                            | 완료 |
 | ----- | -------------------------------------------------------- | ---- |
