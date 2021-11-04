@@ -167,6 +167,11 @@
 
 <img src="md-images/image-20211103133531504.png" alt="image-20211103133531504" style="zoom: 80%;" />
 
+#### ◆ v-on
+
+<img src="md-images/image-20211104090523211.png" alt="image-20211104090523211" style="zoom:67%;" />
+
+
 #### ◆ v-bind
 
 <img src="md-images/image-20211103133757886.png" alt="image-20211103133757886" style="zoom: 67%;" />
@@ -174,6 +179,7 @@
 #### ◆ v-model
 
 <img src="md-images/image-20211103133812287.png" alt="image-20211103133812287" style="zoom: 67%;" />
+
 
 
 

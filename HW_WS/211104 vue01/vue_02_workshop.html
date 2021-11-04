@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div id='app'>
+    <select v-model='status'>
+      <option value="all">전체</option>
+      <option value="progress">진행중</option>
+      <option value="complete">완료</option>
+    </select>
+    <input type="text" v-model='content'>
+    <button @click='addTodo'>+</button>
+
+    <br>
+    <ul >
+      <li v-for="todo in todosByStatus" :key='todo.date'>
+        <!-- checked에 todo의 isChecked를 bind --> 
+        <input type="checkbox" :checked='todo.isChecked' @click='changeTodo(todo)'>
+        <!-- todo의 isChecked가 있으면 class에 bind -->
+        <span :class="{ completed: todo.isChecked }">{{ todo.content }}</span>
+      </li>
+    </ul>
+
+    <br>
+    <button @click='deleteCompleted'>완료된 할 일 지우기</button>
+  
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    // Use Local Storage
+    // Local Storage는 브라우저에서 제공하는 web storage api중 하나로 도메인별 저장공간을 제공
+    // 단순한 key-value 형태로 저장소이며 객체와 비슷
+
+    // chrome 개발자 탭 - 애플리케이션 - Local storage 확인
+
+    // 주요 메서드
+    // localStorage.getItem(key) : 아이템을 가져옴
+    // localStorage.setItem(key, value) : 아이템을 저장함
+    // localStorage.removeItem(key) : 아이템을 삭제함
+    const STORAGE_KEY = 'vue-todo-app'
+    const todoStorage = {
+      fetch: function () {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []
+      },
+      save: function (todos) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
+      },
+    }
+
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        status: 'all',
+        content: null,
+        // todos: [],
+        todos: todoStorage.fetch(),
+      },
+      methods: {
+        addTodo: function () {
+          // console.log(this.content)
+          const todo = {
+            content: this.content,
+            isChecked: false,
+            date: new Date().getTime(),
+          }
+          this.todos.push(todo)
+          this.content = null
+        },
+        changeTodo: function (todo) {
+          todo.isChecked = !todo.isChecked
+          // if (todo.isChecked) {
+          //   todo.isChecked = false 
+          // } else {
+          //   todo.isChecked = true
+          // }
+        },
+        deleteCompleted: function () {
+          this.todos = this.todos.filter(todo => {
+            // return todo.isChecked == false
+            return !todo.isChecked
+          })
+        }
+        
+      },
+      computed: {
+        todosByStatus: function () {
+          return this.todos.filter(todo => {
+            if (this.status == 'progress') {
+              return !todo.isChecked
+            }
+            if (this.status == 'complete') {
+              return todo.isChecked
+            }
+            return true
+          })
+        },
+
+        todosByStatus2: function() {
+          if (this.status == 'progress') {
+            return this.todos.filter(todo => {
+              return !todo.isChecked
+            })
+          }
+          if (this.status == 'complete') {
+            return this.todos.filter(todo => {
+              return todo.isChecked
+            })
+          }
+          return this.todos
+        }
+      },
+      watch: {
+        todos: {
+          handler: function (todos) {todoStorage.save(todos)},
+          deep: true
+        },
+      }
+    })
+  </script>
+</body>
+</html>
