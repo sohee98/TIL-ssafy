@@ -17,7 +17,7 @@ import TheSearchBar from '@/components/TheSearchBar'
 import VideoList from '@/components/VideoList'
 import VideoDetail from '@/components/VideoDetail'
 
-const API_KEY = ''
+const API_KEY = process.env.VUE_APP_YOUTUBE_API_KEY
 const API_URL = 'https://www.googleapis.com/youtube/v3/search'
 
 export default {

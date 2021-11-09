@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='search-bar'>
     <input type="text" @keyup.enter='onInputData'>
   </div>
 </template>
@@ -16,5 +16,12 @@ export default {
 </script>
 
 <style>
-
+.search-bar > input {
+  width: 100%;      
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+.search-bar {
+  transition-duration: 0.5s;
+}
 </style>
