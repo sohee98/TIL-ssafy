@@ -368,16 +368,6 @@
   
   
 
-
-
-
-
-
-
-
-
-
-
 ### 6. Component Binding Helper
 
 * JS Array Helper Method를 통해 배열 조작을 편하게 하는 것과 유사
