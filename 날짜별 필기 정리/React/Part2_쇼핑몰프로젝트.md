@@ -71,6 +71,11 @@
   <Nav.Link> <Link to='/detail'>Detail</Link> </Nav.Link>
   ```
 
+  ```html
+  <Nav.Link as={Link} to='/'>Home</Nav.Link>
+  <Nav.Link as={Link} to='/detail'>Detail</Nav.Link>
+  ```
+
 * history : 뒤로가기 버튼 만들기
 
   ```js
@@ -236,13 +241,101 @@
   
         
 
+### 7. lifecycle Hooks 
+
+* Hook으로 컴포넌트의 인생 중간주간에 뭔가 명령을 줄 수 있음
+  * componentDidMount(){}
+  * componentWillUnMount(){}
+
+```
+useEffect(()=>{
+    //코드를 적습니다 여기
+  });
+```
+
+* useEffect 훅 : 컴포넌트가 mount 되었을 때/ update 될 때 특정 코드를 실행
+  * `setTimeout( ()=>{  1초 후 실행할 코드 }, 1000);`
+* useEffect 훅2 : 컴포넌트가 사라질 때 코드를 실행시킬 수도 있음
+  * `return funtion 어쩌구(){ 실행할 코드~~~~ }`
+
+* useEffect 훅3 : 여러개를 사용하고 싶다면
+  * useEffect  여러개 사용하면 됨. 순서대로 실행됨
+
+* useEffect 훅4 : 특정 state가 변경될때만 실행
+
+  *  ```js
+      useEffect(()=> {
+         // 2초 후에 alert 창 사라지게
+         let 타이머 = setTimeout(()=>{ alert변경(false) }, 2000)
+       },[alert]);	// alert라는 state가 변경이 될때만 실행
+     ```
+
+  * [] 안에 아무것도 없으면 => <Detail>등장시 한번 실행하고 끝남
+
+> setTimeout  타이머를 사용했으면 타이머해제도 사용해야함
+>
+> ```
+> useEffect(()=> {
+>   let 타이머 = setTimeout(()=>{ alert변경(false) }, 2000)
+>   return ()=>{ clearTimeout(타이머) }
+> },[alert]);
+> ```
+>
+> `**clearTimeout(타이머이름)**`
 
 
 
+### 8. Ajax in React1
+
+* Ajax : 서버에 새로고침없이 요청을 할 수 있게 도와줌
+* 요청의 종류
+  * GET 요청 : 주소창에 URL 적는 요청. 특정 페이지 / 자료 읽기
+  * POST 요청 : 서버로 중요 정보 전달. 
+  * 항상 새로고침됨
+
+* Ajax
+  1. jQuery 설치해서 $.ajax() 쓰든가
+  2. axios 설치해서 axios.get() 쓰든가
+  3. 쌩자바스크립트 fetch() 쓰든가
+
+* axios : `npm install axios`
+              `import axios from 'axios';`
+
+  1. axios.get(데이터 요청할 URL)
+  2. 성공하면 .then()
+  3. 실패하면 .catch()
+
+  ```js
+  <button className="btn btn-primary" onClick={()=>{ 
+    axios.get('https://codingapple1.github.io/shop/data2.json')
+    .then((result)=>{ 
+        console.log(result.data) 
+        shoes변경([...shoes, ...result.data])
+    })
+    .catch(()=>{ console.log('실패했어요') })
+  }}>더보기</button>
+  ```
+  
+  * 가져온 자료 출력하는 법 : .then((가져온자료)=>{})
+
+* fetch
+
+  ```js
+  fetch('https://codingapple1.github.io/shop/data2.json').then()
+  ```
+
+  따옴표가 있는 JSON 
+
+  -> axios 쓰면 JSON을 알아서 Object로 바꿔줌
+
+  -> fetch는 Object로 바꿔줘야함
 
 
 
+### 9. Component in Component
 
+1. 하위 컴포넌트가 몇개든 데이터를 전송하려면 props를 씁니다.
+2. 하위컴포넌트가 상위 컴포넌트 state변경하려면 state변경함수 씁니다. 그게 상위에 있으면 props로 전송해서 사용함.
 
 
 

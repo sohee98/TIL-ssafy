@@ -6,10 +6,12 @@ import './App.css';
 import data from './data.js';
 import Detail from './Detail.js';
 import { Link, Route, Switch } from 'react-router-dom'
+import axios from 'axios';
 
 function App() {
 
   let [shoes, shoes변경] = useState(data)
+  let [재고, 재고변경] = useState([10,11,12]);
 
   return (
     <div className="App">
@@ -19,8 +21,8 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link> <Link to='/'>Home</Link> </Nav.Link>
-              <Nav.Link> <Link to='/detail'>Detail</Link> </Nav.Link>
+              <Nav.Link as={Link} to='/'>Home</Nav.Link>
+              <Nav.Link as={Link} to='/detail'>Detail</Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -32,7 +34,7 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      
+
       <Switch>
         <Route exact path="/"> 
           <div className="background">
@@ -45,18 +47,30 @@ function App() {
             </div>
           </div>
           <div className="container">
-          <div className="row">
-            {
-              shoes.map((shoe, i) => {
-                return <Shoe shoe={shoe} i={i}></Shoe>
+            <div className="row">
+              {
+                shoes.map((shoe, i) => {
+                  return <Shoe shoe={shoe} i={i} key={i}></Shoe>
+                })
+              }
+            </div>
+            <button className="btn btn-primary" onClick={()=>{ 
+              // 로딩중이라는 UI 띄움
+              // axios.post('서버URL', { id:'codingapple', px:1234 }).then()
+
+              axios.get('https://codingapple1.github.io/shop/data2.json')
+              .then((result)=>{ 
+                // 로딩중UI 삭제
+                // console.log(result.data) 
+                shoes변경([...shoes, ...result.data])
               })
-            }
-          </div>
+              .catch(()=>{ console.log('실패했어요') })
+            }}>더보기</button>
           </div>
         </Route>
 
         <Route path="/detail/:id">
-          <Detail shoes={shoes}></Detail>
+          <Detail shoes={shoes} 재고={재고} 재고변경={재고변경}></Detail>
         </Route>
 
         <Route path="/:id">
@@ -77,8 +91,6 @@ function Shoe(props){
     </div>
   )
 }
-
-
 
 
 export default App;
