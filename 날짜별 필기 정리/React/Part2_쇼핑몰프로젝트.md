@@ -339,9 +339,99 @@ useEffect(()=>{
 
 
 
+### 10. Redux
 
+> import Table : export default 된거 가져오기
+> import {Table} : Table이라는 변수/함수 가져오기
 
+* `npm install redux react-redux`
 
+* redux 쓰는 이유
+  1. props 없이 모든 컴포넌트가 state 갖다쓰기 가능
+  2. state 데이터 관리가능(용이하다) - state 데이터의 수정방법을 미리 정의
 
+* redux 세팅하기
 
+  * index.js 
+
+    ```js
+    import { Provider } from 'react-redux';
+    import { createStore } from 'redux';
+    let store = createStore(()=>{ return [{ id:0, name:'멋진신발', quan:2 }] });
+    
+    ReactDOM.render(
+      <React.StrictMode>
+        <BrowserRouter>
+          <Provider store={store}>
+            <App/>
+          </Provider>
+        </BrowserRouter>
+      </React.StrictMode>,
+      document.getElementById('root')
+    );
+    ```
+
+  1. `import {Provider}`
+  2. `<Provider>`로 `<App>`감싸기 - 감싸진 애들은 props 없이도 state 공유 가능
+  3. `createStore()` 안에 state 저장
+  4. `<Provider>`에 props 전송
+
+* store에 있는 state 데이터 꺼내쓰는 법
+
+  * cart.js
+
+    ```js
+    import { connect } from 'react-redux';
+    ...
+    function 함수명(state){
+      return {
+        state : state
+      }
+    }
+    
+    export default connect(함수명)(Cart)
+    ```
+
+  1. 하단에 `function state를props화()` 를 하나 만들어주고 state를 props로 등록
+
+  2. `export default connect(state를props화)(Cart); `
+
+     ```js
+     function Cart(props){
+       return(
+         <td>{props.state[0].name}</td>
+       )
+     ```
+
+  * `props.state이름` 으로 저장된 state 자유롭게 사용
+
+#### reducer/dispatch로 데이터 수정하는 법
+
+1. reducer로 수정하는 방법 만들고
+
+   ```js
+   let 기본state = [
+     { id:0, name:'멋진신발', quan:2 }, 
+     { id:1, name:'멋진신발2', quan:4 }
+   ];
+   function reducer(state = 기본state, 액션){
+     if ( 액션.type === '수량증가' ){
+       let copy = [...state];
+       copy[0].quan++;
+       return copy
+       
+     } else {
+       return state
+     }
+   }
+   let store = createStore(reducer);
+   ```
+
+2. dispatch()로 수정
+
+   ```js
+   <th><button onClick={()=>{ props.dispatch({ type:'수량증가' })}}>+</button></th>
+   ```
+
+   
 
